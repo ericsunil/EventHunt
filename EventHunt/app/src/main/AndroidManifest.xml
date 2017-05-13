@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.peyxen.eventilizer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.peyxen.eventilizer.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.peyxen.eventilizer.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.peyxen.eventilizer.WelcomeActivity"
+            android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name="com.peyxen.eventilizer.LoginActivity"
+            android:theme="@style/AppTheme.Dark">
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.peyxen.eventilizer.SignUpActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.peyxen.eventilizer.AddPubEventActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.peyxen.eventilizer.AddPaidEventActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.peyxen.eventilizer.EventDetails"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.peyxen.eventilizer.AddShop"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.peyxen.eventilizer.AddSpecialEventActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.peyxen.eventilizer.Help"
+            android:theme="@style/AppTheme.Dark" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1234"
+            android:exported="true" />
+    </application>
+
+</manifest>
